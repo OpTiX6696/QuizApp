@@ -1,0 +1,425 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+    font-size: 28px;
+    line-height: 50px;
+    text-shadow: 1.5px 1.25px grey;
+    box-shadow: 1px 2px grey;
+    margin-top: -15px
+}
+
+#player-info{
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+    text-align: center;
+    width: 50vw;
+    border: 3px solid grey;
+    margin: 0 auto;
+    background-color: rgb(197, 189, 189);
+}
+
+input#player-name {
+    border: 3px solid grey;
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;;
+    color: grey;
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+p.category {
+/*     border: 1px solid black; */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+    text-shadow: 1px 1px grey;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+}
+
+
+section {
+    margin: 0 auto;
+    width: 90%;
+    height: 800px;
+    max-width: 1024px;
+    /* border: 5px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}  
+
+
+#sections {
+    /* border: 2px solid green; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 65%;
+    width: 100%;
+    align-items: center;
+}
+
+label.level {
+    /* border: 1px solid green; */
+    text-align: center;
+    border-top: 2px solid grey;
+    margin: 0 auto;
+    height: 7%;
+    width: 80%;
+    text-shadow: 1px 1px grey;
+    font-size: 30px;
+    padding-top: 25px;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+}
+
+#level {
+    /* border: 2px solid blue; */
+    height: 8.5%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button[type=button] {
+    /* margin: 1.5px 5px; */
+    width: 22%;
+    height: 30%;
+    border: 3px solid rgba(9, 127, 223, 0.7);
+    /* border: white; */
+    border-radius: 5px;
+    color: rgba(9, 127, 223, 1);
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    /* padding-top: 0.95%; */
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 22px;
+    padding-top: 120px;
+}
+
+input.lev {
+    /* border: 2px solid black; */
+    width: 25%;
+    height: 70%;
+    border: 3px solid grey;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+}
+
+#play {
+    width: 80%;
+    height: 10%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 2px solid grey;
+}
+
+button {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgba(9, 127, 223, 0.2);
+    width: 60%;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-top: 15px;
+    font-size: 30px;
+    font-family: 'Metal Mania', 'Ubuntu', sans-serif;
+/*     padding-top: 15px; */
+}
+
+button[type=button]:focus {
+    animation-name: btn;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes btn {
+    0% {
+
+    }
+    100% {
+        box-shadow: 2px 2px 3px 3px grey;
+        background-color: hsl(240 70% 90%);
+        transform: scale(1.03);
+        border: 4px solid white;
+    }
+}
+
+button#vehicles{
+    background-image: url("../img/car.svg");
+    background-size: 90% 100%;
+    background-position: center;
+}
+
+button#animals{
+    background-image: url("../img/pet.png");
+    background-size: 90% 70%;
+    background-position: center;
+
+}
+
+button#general{
+    background-image: url("../img/knowledge.svg");
+    background-size: 100% 60%;
+    background-position: top;
+    padding-top: 90px;
+}
+
+button#video-games{
+    background-image: url("../img/joystick.svg");
+    background-size: 90% 80%;
+    background-position: top;
+    padding-top: 90px;
+
+}
+
+button#anime{
+    background-image: url("../img/dragon-ball.svg");
+    background-size: 80% 65%;
+    background-position: center;
+    background-position-y: 3px;
+    padding-top: 100px;
+}
+button#myth{
+    background-image: url("../img/minotaur.svg");
+    background-size: 100% 75%;
+    background-position-y: 7px;
+}
+
+button#history{
+    background-image: url("../img/history.svg");
+    background-size: 100% 75%;
+    background-position-y: 7px;
+
+}
+
+button#computer{
+    background-image: url("../img/computer1.svg");
+    background-size: 100% 80%;
+    background-position-y: 7px;
+
+}
+
+button#music{
+    background-image: url("../img/music.svg");
+    background-size: 70% 80%;
+    background-position-y: 7px;
+    background-position-x: 18px;
+    /* padding-top: 75px; */
+
+}
+
+button#science{
+    background-image: url("../img/science.svg");
+    background-size: 100% 70%;
+    background-position: center;
+}
+
+button#sports{
+    background-image: url("../img/trophy.svg");
+    background-size: 100% 70%;
+    background-position: center;
+    background-position-y: 7px;
+}
+
+button#geography{
+    background-image: url("../img/world.svg");
+    background-size: 70% 80%;
+    background-position: center;
+    background-position-y: 7px;
+}
+
+footer {
+    background-color: cornflowerblue;
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 80px;
+    line-height: 40px;
+    text-shadow: 1px 1px grey;
+    font-family: 'Tenali Ramakrishna', 'Ubuntu', sans-serif;
+}
+
+/***************************** 
+Media Querries 
+****************************/
+
+@media screen and (max-width: 724px) {
+  
+  header {
+    font-size: 4.5vw;
+  }
+    section {
+        /* background-color: lawngreen; */
+        width: 100%;
+        height: 950px;
+    }  
+    
+    #sections {
+        height: 65%;
+        font-size: 24px;
+    }
+    
+    #level {
+/*         border: 1px solid red; */
+        margin-top: -40px;
+        margin-bottom: -50px;
+    }
+  
+  #player-info {
+    width: 80vw;
+    margin-bottom: 1vh;
+    font-size: 4.5vw;
+  }
+  
+  label.level, p.category {
+    font-size: 4.5vw;
+  }
+        
+    button[type=button] {
+        width: 30%;
+        height: 22%;
+        font-size: 18px;
+        line-height: 17px;
+        padding-top: 105px;
+    }
+    button#anime{
+        background-size: 80% 68%;
+        background-position: center;
+        background-position-y: 3px;
+        padding-top: 90px;
+    }
+    
+    input.lev {
+        height: 52%;
+        font-size: 3.5vw;
+        width: 30%
+    }
+
+    #play {
+        padding-top: 30px;
+    }
+  
+    
+    button {
+        margin: 0 auto;
+        font-size: 3.5vw;
+    }
+  footer {
+    font-size: 16px;
+  }
+    
+}
+
+/*****************************************
+For the quiz.html. You'll have to add these classes and tags to the js, so the styling can hold on it
+****************************************/
+
+#quiz-content {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 18px;
+}
+#question {
+    /* border: 1px solid green; */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+#options {
+    border-top: 3px solid grey;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* align-self: ; */
+    /* margin-left: 40px; */
+
+}
+label.opts {
+    border: 2px solid rgb(168, 110, 110);
+    border-top-right-radius: 25px;
+    margin: 10px;
+    width: 80%;
+    height: 40px;
+    background-color: rgb(197, 189, 189);
+    font-family: 'Ubuntu', serif;
+}
+
+input.option {
+    border: 3px solid black;
+}
+
+#timer {
+    margin-top: 40px;
+    border: 1px solid purple;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer p {
+    background-color: rgb(0, 110, 255);
+    /* align-self: center; */
+    /* line-height: 25px; */
+    height: 90%;
+    width: 100%;
+}
+#progress {
+    border: 1px solid grey;
+    margin: 40px 0 60px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
