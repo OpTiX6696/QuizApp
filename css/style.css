@@ -293,12 +293,15 @@ For the quiz.html. You'll have to add these classes and tags to the js, so the s
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     line-height: 30px;
     margin-top: 20px;
     font-size: 18px;
+    position: relative;
+    
 }
+
 
 #question {
     /* border: 1px solid green; */
@@ -309,13 +312,51 @@ For the quiz.html. You'll have to add these classes and tags to the js, so the s
     margin-top: 15px;
     margin-bottom: 25px;
     font-size: 34px;
+    position: absolute;
+    top: 10px;
+    /* left: 10px; */
+    animation-name: question-anim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
 }
+@keyframes question-anim {
+    0% {
+        left: -10000px
+    }
+    50% {
+        left: -400px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
 
 #options {
     /* border: 3px solid black; */
     display: flex;
     flex-direction: column;
     width: 85%;
+    margin-top: 150px;
+    position: relative;
+    /* left: 10px; */
+    animation-name: options-anim;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+@keyframes options-anim {
+    0% {
+        left: -10000px
+    }
+    50% {
+        left: -400px;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 label.opts {
@@ -328,9 +369,7 @@ label.opts {
     font-family: 'Ubuntu', serif;
 }
 
-/* Seems like I have issues with this timer animation, I want it to go from left to right. I dont know why its not doing so. I'm hoping you can help with it. 
-
-Also, the animation-duration will be the time for each question.
+/* The animation-duration will be the time for each question.
 */
 #timer {
     margin-top: 40px;
@@ -367,8 +406,6 @@ Also, the animation-duration will be the time for each question.
 
     }
 }
-
-
 
 label#countdown {
     height: 100%;
