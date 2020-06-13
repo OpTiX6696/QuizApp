@@ -297,9 +297,7 @@ For the quiz.html. You'll have to add these classes and tags to the js, so the s
     align-items: left;
     line-height: 30px;
     margin-top: 20px;
-    font-size: 18px;
-    position: relative;
-    
+    font-size: 18px;    
 }
 
 
@@ -312,7 +310,7 @@ For the quiz.html. You'll have to add these classes and tags to the js, so the s
     margin-top: 15px;
     margin-bottom: 25px;
     font-size: 34px;
-    position: absolute;
+    position: relative;
     top: 10px;
     /* left: 10px; */
     animation-name: question-anim;
@@ -338,7 +336,6 @@ For the quiz.html. You'll have to add these classes and tags to the js, so the s
     display: flex;
     flex-direction: column;
     width: 85%;
-    margin-top: 150px;
     position: relative;
     /* left: 10px; */
     animation-name: options-anim;
