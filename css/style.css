@@ -423,6 +423,55 @@ label#countdown {
 }
 
 
+/******************************
+FOR THE LEADERBOARD PAGE
+******************************/
+
+#leaderboard {
+    background-color: #e3effb;
+}
+table {
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 150%;
+    width: 70vw;
+    text-align: center;
+    background-color: #e3effb;
+    max-width: 724px;
+}
+
+table > caption {
+    font-family: 'Metal Mania', 'Ubuntu', sans-serif;
+    font-size: 200%;
+    /* border: 1px solid grey; */
+    color: rgb(80, 4, 4);
+    box-shadow: .5px 1px 9px 2px grey;
+    border-radius: 10px;
+}
+
+thead tr {
+    color: brown;
+    font-family: 'Tenali Ramakrishna', 'Ubuntu', sans-serif;
+    font-size: 150%;
+}
+
+
+td {
+    padding: 15px;
+}
+
+
+tbody tr:nth-child(-n+3) {
+    background-color: teal;
+    color: gainsboro;
+    box-shadow: .5px 2px 9px 2px grey;
+    border-radius: 10px;
+}
+
+tfoot tr td {
+    padding-top: 30px;
+}
+
 
 /***************************** 
 Media Querries 
@@ -501,6 +550,16 @@ Media Querries
     *********************************************/
     #question {
         width: 100%;
+    }
+    /*******************************
+    For Leaderboard
+    ******************************/
+
+    td {
+        padding: 10px;
+    }
+    table-layout {
+        width: 90vw;
     }
     
 }  
