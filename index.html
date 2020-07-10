@@ -2,57 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Metal+Mania&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,600;0,700;1,300&family=Tenali+Ramakrishna&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet"  href="css/style.css">
-    <script src="js/script.js"></script>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet"  href="css/home-style.css">
     <title>Quiz App</title>
   </head>
   <body>
     
     <header>
       <h1>OFT Quiz</h1>
+      <a href="leaderboard.html">View Leaderboard</a>
       <!-- <hr> -->
     </header>
     
     
     <div id="container">
-<!--         Whatever is loaded from the AJAX Request enters this div.-->
+      <!--         Whatever is loaded from the AJAX Request enters this div.-->
+
     <div id="player-info">
       <label>Enter Player's Name: </label><br>
       <input type="text" id="player-name" class="player-name">
     </div>
+    <p class="no-name"></p>
     <p class="category">Select A Category</p>
-
       <section>
         <div id="sections">
         <!-- Options go in here. -->
 
-
-            <button type="button" value="vehicles" id="vehicle">Vehicles</button>
-
-            <button type="button" value="animals"  id="animal">Animals</button>
-
-            <button type="button" value="general"  id="general">General Knowledge</button>
-
-            <button type="button" value="video" id="video-games">Video Games</button>
-
-            <button type="button" value="anime" id="anime">Anime / Manga</button>
-
-            <button type="button" value="mythology" id="myth">Mythology</button>
-
-            <button type="button" value="history" id="history">History</button>
-
-            <button type="button" value="computer" id="computer">Computer</button>
+          <button type="button" class="cat_btn" name="vehicle" value="28" id="vehicles">Vehicles</button>
           
-            <button type="button" value="music" id="music">Music</button>
-
-            <button type="button" value="science" id="science">Science</button>
-
-            <button type="button" value="sports" id="sports">Sports</button>
-
-            <button type="button" value="geography"  id="geography">Geography</button>
+          <button type="button" class="cat_btn" name="animals" value="27"  id="animals">Animals</button>
+          
+          <button type="button" class="cat_btn" name="general" value="9"  id="general">General</button>
+          
+          <button type="button" class="cat_btn" name="games" value="15" id="video-games">Video Games</button>
+          
+          <button type="button" class="cat_btn" name="anime" value="31" id="anime">Manga</button>
+          
+          <button type="button" class="cat_btn" name="mythology" value="20" id="myth">Mythology</button>
+          
+          <button type="button" class="cat_btn" name="history" value="23" id="history">History</button>
+          
+          <button type="button" class="cat_btn" name="computer" value="18" id="computer">Computer</button>
+          
+          <button type="button" class="cat_btn" name="music" value="12" id="music">Music</button>
+          
+          <button type="button" class="cat_btn" name="science" value="17" id="science">Science</button>
+          
+          <button type="button" class="cat_btn" name="sports" value="21" id="sports">Sports</button>
+          
+          <button type="button" class="cat_btn" name="geography" value="22"  id="geography">Geography</button>
+          
         </div>
+        
         
         <!-- <label class="level">Select Level</label>
 
@@ -62,13 +65,16 @@
           <input type="button" value="Pro" id="pro" class="lev">
         </div> -->
         <div id="play">
-          <button>Let's Rock And Roll!</button>
+          <button class="start">Let's Rock And Roll!</button>
         </div>
       </section>
+      <p class="no-category"></p>
     </div>
-       
+      
     <footer>
       Powered by <a href="https://www.linkedin.com/in/faruk-yusuf-8aa81a97">Fabiola</a>, <a href="https://github.com/iamTMTY">TMTY</a> & <a href="https://github.com/OpTiX6696">OpTiX</a>
     </footer>
+
+<script src="./js/index.js"></script>
 </body>
 </html>

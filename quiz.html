@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera&family=Metal+Mania&family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,600;0,700;1,300&family=Tenali+Ramakrishna&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet"  href="css/style.css">
-    <script src="js/script.js"></script>
-    <title>Quiz App</title>
-  </head>
-  <body>
+<html lang="en">
 
-    <!-- Everything here should go into the index.html's div#container when the "Let's Rock and Roll" button is pressed -->
-        <content id="quiz-content">
-            
-            <div id="question">
-                <!-- Question should come in here -->
-                Which of these is the name of the highest mountain in the world, its height and location.
-            </div>
-            <div id="options">
-                <label class="opts"><input type="radio" class="option" value="option-a" name="choice"> Option A</label>
-                <label class="opts"><input type="radio" class="option" value="option-b" name="choice"> Option B</label>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizing</title>
+</head>
 
-                <label class="opts"><input type="radio" class="option" value="option-c" name="choice"> Option C</label>
+<body>
+    <div class="question__container">
+        <!-- <p>How long is this??? Veryyyyyy Looonnngggggggg!!!! </p> -->
+        <!-- <div><p>And this is how longgg</p></div> -->
+        <img src="./img/loading.gif" alt="Loading...">
+    </div>
+    <h1 id="response" style="color: black"></h1>
 
-                <label class="opts"><input type="radio" class="option" value="option-d" name="choice"> Option D</label>
-            </div>
-            <div id="timer">
-                <label id="countdown"> </label>
-            </div>
-            <div id="progress">
-                Send the progress into this div. Like 1 of 5 bla bla bla. And please dont forget to remove the border.
-            </div>
+    <script src="./js/quiz.js"></script>
 
-        </content>
+</body>
 
-
-
-  </body>
+</html>

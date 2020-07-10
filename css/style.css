@@ -1,593 +1,219 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+.score_page_container {
+  position: relative;
+  top: 50px;
+  left: -100vw;
+  margin: auto;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 20px;
+  background: #def0f8;
+  -webkit-box-shadow: 3px 2px 6px 1px #c5d1c5, -3px -2px 6px 1px #c5d1c5;
+          box-shadow: 3px 2px 6px 1px #c5d1c5, -3px -2px 6px 1px #c5d1c5;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-body {
-    /* border: 2px solid green; */
-    /* height: 800px; */
-    width: 100vw;
-    margin: 0 auto;
-    position: relative;
-    top: 0;
-    right: 0;
-
+.score_page_container .your_score {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 40px;
+  padding-top: 50px;
+  margin: 0;
 }
 
-header {
-    /* border: 3px solid blue; */
-    width: 100vw;
-    text-align: center;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
-    font-size: 200%;
-    height: 70px;
-    margin-top: -50px;
-    /* line-height: 20%; */
-    text-shadow: 1.5px 1.25px grey;
-    box-shadow: 1px 2px grey;
-    position: relative;
-    top: 0;
+.score_page_container .score {
+  margin: 40px 0 20px 0;
+  font-weight: bolder;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  color: lightsalmon;
+}
+
+.score_page_container .score span {
+  color: black;
+  font-size: 23px;
+}
+
+.score_page_container .rank {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.score_page_container .score_page_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  bottom: -50px;
+}
+
+.score_page_container .score_page_buttons .score_page_button {
+  width: 150px;
+  height: 40px;
+  color: white;
+  background: #ac3709;
+  margin: 0 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.score_page_container .score_page_buttons .score_page_button:hover {
+  cursor: pointer;
+  background: #e9a488;
+  color: black;
+}
+
+.question__container {
+  position: relative;
+  top: 5vh; /* I changed this...*/
+  border: 2px solid black;
+  width: 70vw;
+  min-height: 50vh;
+  margin: auto;
+  -webkit-transition: all 1s normal;
+  transition: all 1s normal;
+}
+
+.question__container img {
+  position: relative;
+  top: 100px;
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+}
+
+.question__container p {
+  position: relative;
+  left: -100vw;
+  font-size: 150%; /* I changed this font size*/
+  margin-left: 5px;
+  -webkit-animation: quest__p 1.5s normal 0s 1 forwards;
+          animation: quest__p 1.5s normal 0s 1 forwards;
+  text-align: center;
+}
+
+.question__container div {
+  margin-top: 50px;
+}
+
+.question__container div p {
+  text-align: start;
+  position: relative;
+  left: -100vw;
+  font-size: 130%;/* i changed this too*/
+  border: 2px solid black;
+  padding: 10px;
+  margin: 5px 10px 5px 10px;
+  -webkit-animation: answer__p 1.5s normal 0.5s 1 forwards;
+          animation: answer__p 1.5s normal 0.5s 1 forwards;
+}
+
+.question__container div p:hover {
+  background: #cfcbcb;
+  cursor: pointer;
+}
+
+.question__container .timer {
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 0%;
+  background: green;
+  -webkit-animation: timer_animate 20s normal 2s 1 forwards;
+          animation: timer_animate 20s normal 2s 1 forwards;
+}
+
+@-webkit-keyframes quest__p {
+  0% {
+    left: -100vw;
+  }
+  100% {
     left: 0;
+  }
 }
 
-#player-info{
-    font-size: 180%;
-    text-shadow: 1px 1px grey;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
-    text-align: center;
-    width: 60vw;
-    max-width: 864px;
-    height: 6.5%;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 1px 1px 15px 4px grey;
-    margin: 0 auto;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    padding-top: 0.5%;
-    /* background-color: rgb(197, 189, 189); */
-    background-color: white;
-    position: relative;
+@keyframes quest__p {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
 }
 
-input#player-name {
-    border: 1.25px solid grey;
-    border-radius: 7px;
-    box-shadow: 1px 1px 15px 4px grey;
-    font-size: 80%;
-    text-shadow: 1px 1px grey;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;;
-    color: black;
-    width: 90%;
-    position: absolute;
-    top: 85%;
-    left: 5%;
+@-webkit-keyframes answer__p {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
 }
 
-p.category {
-    /* border: 1px solid black; */
-    text-align: center;
-    font-size: 200%;
-    height: 40px;
-    margin-top: 45px;
-    margin-bottom: 0.5px;
-    text-shadow: 1px 1px grey;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+@keyframes answer__p {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
 }
 
-section {
-    /* border: 5px solid red; */
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1000px;
-    /* max-width: 1024px; */
-    margin: 0 auto;
-    height: 510px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+@-webkit-keyframes timer_animate {
+  0% {
+    width: 0%;
+    background: green;
+  }
+  30% {
+    background: green;
+  }
+  50% {
+    background: yellow;
+  }
+  70% {
+    background: red;
+  }
+  100% {
+    width: 95%;
+    background: red;
+  }
 }
 
-#sections {
-    /* border: 2px solid blue; */
-    border-bottom: 1px solid grey;
-    /* box-shadow: 0 1px 7px 2px gray; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    height: 90%;
-    width: 100%;
-    align-items: center;
-    padding-bottom: 2%;
-    margin-bottom: 30px;
+@keyframes timer_animate {
+  0% {
+    width: 0%;
+    background: green;
+  }
+  30% {
+    background: green;
+  }
+  50% {
+    background: yellow;
+  }
+  70% {
+    background: red;
+  }
+  100% {
+    width: 95%;
+    background: red;
+  }
 }
 
-/* label.level {
-    border: 1px solid green;
-    text-align: center;
-    border-top: 2px solid grey;
-    margin: 0 auto;
-    height: 7%;
-    width: 80%;
-    text-shadow: 1px 1px grey;
-    font-size: 30px;
-    padding-top: 25px;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
+@media (max-width: 700px) {
+  .question__container {
+    width: 90vw;
+  }
 }
-
-#level {
-    border: 2px solid blue;
-    height: 8.5%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-} */
-
-/* div.sections {
-    border: 1px solid black;
-} */
-
-button[type=button] {
-    width: 22%;
-    height: 30%;
-    box-shadow: 1px 1px 7px 2px grey;
-    border: white;
-    border-radius: 7px;
-    color: rgba(9, 127, 223, 1);
-    font-weight: bold;
-    font-size: 130%;
-    background-color: transparent;
-    padding-top: 70px;
-    line-height: 20px;
-    background-repeat: no-repeat;
-    font-family: 'Ubuntu', sans-serif;
-    padding-top: 95px;
-}
-
-/* input.lev {
-    border: 2px solid black;
-    width: 25%;
-    height: 70%;
-    border: 3px solid grey;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    border-radius: 5px;
-    font-family: 'Tenali Ramakrishna', 'Metal Mania', 'Ubuntu', sans-serif;
-} */
-
-#play {
-    /* border: 2px solid grey; */
-    width: 80%;
-    height: 10%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#play button {
-    /* border: 2px solid black; */
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(9, 127, 223, 0.9);
-    box-shadow: 0.5px 0.5px 10px 5px grey;
-    width: 70%;
-    margin: 0 auto;
-    font-size: 30px;
-    font-family: 'Metal Mania', 'Ubuntu', sans-serif;
-}
-
-footer {
-    background-color: cornflowerblue;
-    text-align: right;
-    font-weight: bold;
-    font-size: 150%;
-    position: relative;
-    bottom: 0;
-    width: 100vw;
-    line-height: 40px;
-    padding-right: 7vw;
-    text-shadow: 1px 1px grey;
-    font-family: 'Tenali Ramakrishna', 'Ubuntu', sans-serif;
-    margin-top: 5%;
-}
-footer a {
-    text-decoration: none;
-}
-
-button#vehicle{
-    background-image: url("../img/car.svg");
-    background-size: 90% 120%;
-    background-position: center;
-}
-
-button#animal{
-    background-image: url("../img/pet.png");
-    background-size: 60% 70%;
-    background-position: center;
-    background-position-y: 5px;
-}
-
-button#general{
-    background-image: url("../img/knowledge.svg");
-    background-size: 150% 60%;
-    background-position: top;
-    padding-top: 80px;
-}
-
-button#video-games{
-    background-image: url("../img/joystick.svg");
-    background-size: 100% 80%;
-    background-position: top;
-    padding-top: 100px;
-
-}
-
-button#anime{
-    background-image: url("../img/dragon-ball.svg");
-    background-size: 80% 62%;
-    background-position: center;
-    background-position-y: 3px;
-    padding-top: 83px;
-}
-
-button#myth{
-    background-image: url("../img/minotaur.svg");
-    background-size: 100% 70%;
-    background-position-y: 7px;
-}
-
-button#history{
-    background-image: url("../img/history.svg");
-    background-size: 100% 70%;
-    background-position-y: 7px;
-}
-
-button#computer{
-    background-image: url("../img/computer1.svg");
-    background-size: 100% 75%;
-    background-position-y: 7px;
-}
-
-button#music{
-    background-image: url("../img/music.svg");
-    background-size: 70% 70%;
-    background-position: center;
-    background-position-y: 7px;
-    padding-top: 90px;
-}
-
-button#science{
-    background-image: url("../img/science.svg");
-    background-size: 100% 70%;
-    background-position: center;
-    background-position-y: 7px;
-}
-
-button#sports{
-    background-image: url("../img/trophy.svg");
-    background-size: 100% 70%;
-    background-position: center;
-    background-position-y: 7px;
-}
-
-button#geography{
-    background-image: url("../img/world.svg");
-    background-size: 70% 70%;
-    background-position: center;
-    background-position-y: 7px;
-}
-
-/*****************************************
-For the quiz.html. You'll have to add these classes and tags to the js, so the styling can hold on it
-****************************************/
-
-#quiz-content {
-    /* border: 1px solid black; */
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: left;
-    align-items: left;
-    line-height: 30px;
-    margin-top: 20px;
-    font-size: 18px;    
-}
-
-
-#question {
-    /* border: 1px solid green; */
-    font-family: 'Tenali Ramakrishna', 'Ubuntu', sans-serif;
-    padding-bottom: 15px;
-    width: 70%;
-    border-bottom:2px solid grey;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    font-size: 34px;
-    position: relative;
-    top: 10px;
-    /* left: 10px; */
-    animation-name: question-anim;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-@keyframes question-anim {
-    0% {
-        left: -10000px
-    }
-    50% {
-        left: -400px;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-
-#options {
-    /* border: 3px solid black; */
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    position: relative;
-    /* left: 10px; */
-    animation-name: options-anim;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-
-}
-@keyframes options-anim {
-    0% {
-        left: -10000px
-    }
-    50% {
-        left: -400px;
-    }
-    100% {
-        left: 0;
-    }
-}
-
-label.opts {
-    border: 2px solid rgb(168, 110, 110);
-    border-top-right-radius: 25px;
-    margin: 10px;
-    width: 80%;
-    height: 40px;
-    background-color: rgb(197, 189, 189);
-    font-family: 'Ubuntu', serif;
-}
-
-/* The animation-duration will be the time for each question.
-*/
-#timer {
-    margin-top: 40px;
-    /* border: 3px solid purple; */
-    position: relative;
-    height: 30px;
-    align-self: left;
-    background-color: green;
-    animation-name: time;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes time {
-    0% {
-        width: 0%;
-        background-color: lightblue;
-    }
-    25% {
-        width: 20%;
-    }
-    50% {
-        width: 40%;
-        background-color: greenyellow;
-    }
-    75% {
-        width: 60%;
-        background-color: pink;
-    }
-    100% {
-        width: 80%;
-        background-color: red;
-
-    }
-}
-
-label#countdown {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    text-align: right;
-    right: 0;
-   
-}
-
-
-#progress {
-    border: 1px solid grey;
-    /* height: 40px; */
-    margin-top: 5%;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 30px;
-}
-
-
-/******************************
-FOR THE LEADERBOARD PAGE
-******************************/
-
-#leaderboard {
-    background-color: #e3effb;
-}
-table {
-    margin: 0 auto;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 150%;
-    width: 70vw;
-    text-align: center;
-    background-color: #e3effb;
-    max-width: 724px;
-}
-
-table > caption {
-    font-family: 'Metal Mania', 'Ubuntu', sans-serif;
-    font-size: 200%;
-    /* border: 1px solid grey; */
-    color: rgb(80, 4, 4);
-    box-shadow: .5px 1px 9px 2px grey;
-    border-radius: 10px;
-}
-
-thead tr {
-    color: brown;
-    font-family: 'Tenali Ramakrishna', 'Ubuntu', sans-serif;
-    font-size: 150%;
-}
-
-
-td {
-    padding: 15px;
-}
-
-
-tbody tr:nth-child(-n+3) {
-    background-color: teal;
-    color: gainsboro;
-    box-shadow: .5px 2px 9px 2px grey;
-    border-radius: 10px;
-}
-
-tfoot tr td {
-    padding-top: 30px;
-}
-
-
-/***************************** 
-Media Querries 
-****************************/
-
-@media screen and (max-width: 724px) {
-  
-    header {
-        /* border: 2px solid red; */
-        height: 55px;
-        top: 1.5vh;
-        font-size: 4.5vw;
-    }
-
-    #player-info {
-        width: 80vw;
-        font-size: 4.5vw;
-    }
-
-    p.category {
-        font-size: 4.5vw;
-        margin-top: 35px;
-        margin-bottom: -5px;
-    }
-
-    section {
-        /* background-color: lawngreen; */
-        width: 100%;
-        height: 650px;
-    }  
-    
-    #sections {
-        font-size: 24px;
-    }
-    
-    /* #level {
-        border: 1px solid red;
-        margin-top: -40px;
-        margin-bottom: -50px;
-    }   */
-        
-    button[type=button] {
-        width: 30%;
-        height: 22%;
-        font-size: 18px;
-        line-height: 17px;
-        /* padding-top: 105px; */
-    }
-    button#anime{
-        background-size: 80% 68%;
-        background-position: center;
-        background-position-y: 3px;
-        padding-top: 90px;
-    }
-    
-    input.lev {
-        height: 52%;
-        font-size: 3.5vw;
-        width: 30%;
-    } 
-
-    #play {
-        margin-top: -10px;
-    }
-  
-    button {
-        font-size: 3.5vw;
-    }
-
-    footer {
-        font-size: 3.5vw;
-    }
-
-    /**********************************************
-    For the Gameplay
-    *********************************************/
-    #question {
-        width: 100%;
-    }
-    /*******************************
-    For Leaderboard
-    ******************************/
-
-    td {
-        padding: 10px;
-    }
-    table-layout {
-        width: 90vw;
-    }
-    
-}  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

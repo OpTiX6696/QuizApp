@@ -1,0 +1,63 @@
+:root {
+    background-color: #e3effb;
+}
+
+div#container {
+    /* border: 2px solid black; */
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+div p {
+    font-family: 'Ubuntu', serif;
+    font-size: 140%;
+}
+
+p:nth-of-type(1) {
+    font-size: 220%;
+}
+#score {
+    font-size: 150%;
+}
+#nav-btns {
+    margin-top: 80px;
+}
+#nav-btns a {
+    font-family: 'Ubuntu', serif;
+    background-color: teal;
+    color: #e3effb;
+    font-size: 130%;
+    border: 2px solid grey;
+    padding: 5px 10px;
+    margin-left: 30px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+#nav-btns a:hover {
+    animation-name: btns;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    
+}
+@keyframes btns {
+    0% {
+        padding-right: 10px;
+    }
+    50% {
+        padding-right: 20px;
+
+    }
+    100% {
+        padding-right: 55px;
+        background-color: #e3effb;
+        border: 2px solid teal;
+        box-shadow: .5px 2px 9px 2px grey;
+        color: teal;
+    }
+}
+
